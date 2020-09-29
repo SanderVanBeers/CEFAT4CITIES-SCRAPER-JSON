@@ -15,8 +15,7 @@ class FullsitePipeline:
         self.file.close()
 
     def process_item(self, item, spider):
-        if len(item['pdf_docs']) > 1:
-            line = json.dumps(ItemAdapter(item).asdict()) + "\n"
-            self.file.write(line)
-            return item
-        
+        line = json.dumps(ItemAdapter(item).asdict()) + "\n"
+        self.file.write(line)
+        return item
+    

@@ -17,6 +17,7 @@ from lxml.html.clean import Cleaner
 from lxml import html
 from scrapy.http import HtmlResponse
 from scrapy.exceptions import NotConfigured
+from base64 import b64encode
 import html2text
 from bs4 import BeautifulSoup
 import pickle
@@ -134,7 +135,7 @@ class FullSiteSpider(scrapy.Spider):
 
             self.logger.debug("Detected language '%s' for: %s",
                               detected_language, response.url)
-            html_content = response.body.decode("utf-8") 
+            html_content = b64encode(response.body).decode('UTF8')
             url = response.url
 
             pdf_urls = [url for url in response.css('a::attr(href)').extract() if '.pdf'.casefold() in url]
