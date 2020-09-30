@@ -1,26 +1,24 @@
 # -*- coding: UTF-8 -*-
 
+import datetime
+import logging
 import os
 import re
-import scrapy
-import uuid
-import datetime
 import time
-import logging
-from datetime import date
-import langdetect
-from datetime import date
-from langdetect import detect
-from urllib.parse import urlparse
-from urllib.parse import parse_qs
-from lxml.html.clean import Cleaner
-from lxml import html
-from scrapy.http import HtmlResponse
-from scrapy.exceptions import NotConfigured
+import uuid
 from base64 import b64encode
-import html2text
+from datetime import date
+from urllib.parse import parse_qs
+from urllib.parse import urlparse
+
+import scrapy
 from bs4 import BeautifulSoup
-import pickle
+from langdetect import detect
+from lxml import html
+from lxml.html.clean import Cleaner
+from scrapy.exceptions import NotConfigured
+from scrapy.http import HtmlResponse
+
 
 class FullSiteSpider(scrapy.Spider):
     
