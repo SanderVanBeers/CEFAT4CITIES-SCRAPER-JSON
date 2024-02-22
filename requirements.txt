@@ -13,7 +13,7 @@ itemadapter==0.1.0
 joblib==1.2.0
 langdetect==1.0.8
 lxml==4.9.1
-numpy==1.18.5
+numpy==1.22.0
 parsel==1.6.0
 pickle-mixin==1.0.2
 Protego==0.1.16
@@ -25,7 +25,7 @@ PyHamcrest==2.0.2
 pyOpenSSL==19.1.0
 queuelib==1.5.0
 scikit-learn==0.22.2.post1
-scipy==1.4.1
+scipy==1.11.1
 Scrapy==2.11.1
 service-identity==18.1.0
 six==1.15.0
